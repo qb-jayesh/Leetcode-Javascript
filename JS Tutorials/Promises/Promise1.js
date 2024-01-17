@@ -23,7 +23,7 @@ function fetchData() {
             // Reject the promise if there's an error
             reject(error);
           });
-      }, 1000);
+      },1000);
     });
   }
   
