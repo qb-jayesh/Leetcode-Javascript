@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Enter Your Name</h1>
+    <input type="text" placeholder="Enter Name" id="hi"/>
+    <button id="submitBtn">Submit</button>
+    <button id="clearBtn">Clear</button>
+
+    <ul id="name">
+    </ul>
+
+    <script>
+
+        const submitBtn = document.getElementById('submitBtn');
+        const clearBtn = document.getElementById('clearBtn')
+        const input = document.getElementById('hi');
+        const ul = document.getElementById('name');
+
+        submitBtn.addEventListener('click', () => {
+            const names = input.value.split('/n')
+
+            ul.insertAdjacentHTML('beforeend', `<li>${names}</li>`);
+
+        input.value = '';
+        });
+
+        clearBtn.addEventListener('click',()=>{
+            ul.innerHTML = '';
+        })
+
+   
+    </script>
+    
+</body>
+</html>

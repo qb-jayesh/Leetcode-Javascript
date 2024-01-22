@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    
+    <h1>Enter Name</h1>
+    <input type="text" placeholder="Your Name"/>
+    <button id="submitBtn">Submit</button>
+    <button id="clearBtn">Clear</button>
+
+    <ul id="nameList">
+
+    </ul>
+
+    <script>
+        const inputEl = document.querySelector('input');
+        const listEl = document.getElementById('nameList');
+        
+
+
+        document.getElementById('submitBtn').addEventListener('click', () => {
+            const inputValue = inputEl.value;
+            listEl.insertAdjacentHTML('beforeend', `<li>${inputValue}</li>`);
+            inputEl.value = ''; 
+
+            saveListToLocalStorage();
+        });
+
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            listEl.innerHTML = ''; 
+
+            saveListToLocalStorage();
+        });
+
+        // Function to save the current list items to local storage
+        function saveListToLocalStorage() {
+            const listItems = Array.from(listEl.children).map(li => li.outerHTML);
+            localStorage.setItem('nameListItems',JSON.stringify(listItems));
+        }
+
+        // Load the saved list items from local storage
+        const savedItems = JSON.parse(localStorage.getItem('nameListItems')) || [];
+        listEl.innerHTML = savedItems.join('');
+
+    </script>
+
+</body>
+</html>

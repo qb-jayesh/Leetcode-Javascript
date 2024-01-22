@@ -1,6 +1,6 @@
 function fetchData() {
     return new Promise((resolve, reject) => {
-        
+          
         setTimeout(() => {
         fetch('https://opentdb.com/api.php?amount=1&category=9&type=multiple')
           .then(response => {
