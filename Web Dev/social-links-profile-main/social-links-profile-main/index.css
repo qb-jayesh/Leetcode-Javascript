@@ -1,0 +1,75 @@
+body {
+
+    background-color: #121110;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+main {
+    border-radius: 15px;
+    height: auto;
+    width: 500px;
+    background-color: hsl(0, 0%, 12%);
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 1px 1px 15px 5px hsl(75, 94%, 57%);
+}
+
+.first{
+   text-align: center;
+   border-radius: 50%; 
+   font-family: 'Outfit', sans-serif;
+
+}
+
+.image{
+    border-radius: 50%;
+    width: 23%;
+    height: 23%;
+}
+
+h1{
+    color: hsl(0, 0%, 100%);
+    font-family: 'Outfit', sans-serif;
+}
+
+h3{
+    color: hsl(75, 94%, 57%);
+}
+
+p{
+    color:  hsl(0, 0%, 100%)
+}
+
+.states {
+    color: rgb(255, 255, 255);
+    /* border: 1px solid; */
+}
+
+.a{
+    display: inline-block;
+    color: white;
+    width: 55%;
+    border-radius: 5px;
+    background: hsl(0, 0%, 20%);
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    padding: 30px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px 2px white;
+}
+
+
+.a:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: black;
+}
+
